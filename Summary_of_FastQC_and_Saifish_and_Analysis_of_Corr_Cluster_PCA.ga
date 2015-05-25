@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "", 
     "format-version": "0.1", 
-    "name": "Summary_of_FastQC_and_Saifish_and_Analysis_of_Corr_Cluster_PCA", 
+    "name": "Summary_of_FastQC_and_Saifish_and_Analysis_of_Corr_Cluster_PCA (imported from API)", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -24,7 +24,7 @@
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetFastQCRawDataFiles", 
-            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"0525_test-WF02\\\"\", \"inp_apikey\": \"\\\"82b40c2f0e62f4d7020ac58ceaf6a028\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetFastQCRawDataFiles\\\"\"}", 
+            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"None\\\"\", \"inp_apikey\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetFastQCRawDataFiles\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
@@ -50,7 +50,7 @@
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetSailfishCountInfo", 
-            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"0525_test-WF02\\\"\", \"inp_apikey\": \"\\\"82b40c2f0e62f4d7020ac58ceaf6a028\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetSailfishCountInfo\\\"\"}", 
+            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"None\\\"\", \"inp_apikey\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetSailfishCountInfo\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
@@ -76,7 +76,7 @@
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetDatasetDatPath", 
-            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_hname\": \"\\\"0525_test-WF02\\\"\", \"input_apikey\": \"\\\"82b40c2f0e62f4d7020ac58ceaf6a028\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetDatasetDatPath\\\"\"}", 
+            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_hname\": \"\\\"None\\\"\", \"input_apikey\": \"\\\"None\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetDatasetDatPath\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
@@ -231,5 +231,5 @@
             "uuid": "204c4784-43ef-4d78-be7c-31203b2abf58"
         }
     }, 
-    "uuid": "019a28f9-b366-4248-a948-5b07bced7af0"
+    "uuid": "c2fb17eb-4ff9-4a6d-b9bd-c0a1e61e7598"
 }
