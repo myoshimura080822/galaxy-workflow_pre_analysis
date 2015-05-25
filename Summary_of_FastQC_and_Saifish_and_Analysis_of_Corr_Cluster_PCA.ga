@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "", 
     "format-version": "0.1", 
-    "name": "Summary_of_FastQC_and_Saifish_and_Analysis_of_Corr_Cluster_PCA (imported from API)", 
+    "name": "Summary_of_FastQC_and_Saifish_and_Analysis_of_Corr_Cluster_PCA", 
     "steps": {
         "0": {
             "annotation": "", 
