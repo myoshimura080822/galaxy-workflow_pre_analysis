@@ -1,0 +1,235 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "Summary_of_FastQC_and_Saifish_and_Analysis_of_Corr_Cluster_PCA", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GetFastQCRawDataFiles", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 200, 
+                "top": 124
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "GetFastQCRawDataFiles", 
+            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"0525_test-WF02\\\"\", \"inp_apikey\": \"\\\"82b40c2f0e62f4d7020ac58ceaf6a028\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetFastQCRawDataFiles\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "7e33c902-3aa4-4e32-9be4-5aa4bcf5f98c"
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GetSailfishCountInfo", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 200, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "GetSailfishCountInfo", 
+            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"0525_test-WF02\\\"\", \"inp_apikey\": \"\\\"82b40c2f0e62f4d7020ac58ceaf6a028\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetSailfishCountInfo\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "d9e5d7ca-1b88-4ea8-81e5-e82bd46fd664"
+        }, 
+        "2": {
+            "annotation": "", 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [], 
+            "label": null, 
+            "name": "GetDatasetDatPath", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 200, 
+                "top": 440
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "GetDatasetDatPath", 
+            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_hname\": \"\\\"0525_test-WF02\\\"\", \"input_apikey\": \"\\\"82b40c2f0e62f4d7020ac58ceaf6a028\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetDatasetDatPath\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "27670b19-6f64-40b0-92ce-be9cbc19bd23"
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
+            "input_connections": {
+                "input_fastqc": {
+                    "id": 0, 
+                    "output_name": "tab_file"
+                }, 
+                "input_sailfish": {
+                    "id": 1, 
+                    "output_name": "tab_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "SummaryOfReadQC", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 494, 
+                "top": 141
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "SummaryOfReadQC", 
+            "tool_state": "{\"input_fastqc\": \"null\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_sailfish\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"SummaryOfReadQC\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "2af888e1-daaa-47c0-97ec-1fce4bcf973c"
+        }, 
+        "4": {
+            "annotation": "", 
+            "id": 4, 
+            "input_connections": {
+                "input1": {
+                    "id": 2, 
+                    "output_name": "tab_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "SailfishConvertAndMergeColumnForDEG", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 497, 
+                "top": 336
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "SailfishConvertAndMergeColumnForDEG", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"SailfishConvertAndMergeColumnForDEG\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "8d2c8103-0b27-4da0-beb5-9ee63ba868df"
+        }, 
+        "5": {
+            "annotation": "", 
+            "id": 5, 
+            "input_connections": {
+                "input1": {
+                    "id": 4, 
+                    "output_name": "tab_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "CorrAndClusterForLogCountData", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tab_file2", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 921, 
+                "top": 354
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "CorrAndClusterForLogCountData", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"CorrAndClusterForLogCountData\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "d38a5adc-fc5c-4b63-b234-1e6ac6bdee1f"
+        }, 
+        "6": {
+            "annotation": "", 
+            "id": 6, 
+            "input_connections": {
+                "input1": {
+                    "id": 4, 
+                    "output_name": "tab_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "PcaAndVisualizationInGalaxy", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tab_file2", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 921, 
+                "top": 528
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "PcaAndVisualizationInGalaxy", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"PcaAndVisualizationInGalaxy\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "204c4784-43ef-4d78-be7c-31203b2abf58"
+        }
+    }, 
+    "uuid": "019a28f9-b366-4248-a948-5b07bced7af0"
+}
