@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "", 
     "format-version": "0.1", 
-    "name": "FastqMcf_FastQC_Sailfish_for_SingleFastq", 
+    "name": "RNA-seq_01_Paired-end(Quantifying in Sailfish)", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -11,7 +11,7 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "Input Dataset [Adapter]"
+                    "name": "Input Dataset [Adapter ot Primer list]"
                 }
             ], 
             "label": null, 
@@ -23,7 +23,7 @@
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"name\": \"Input Dataset [Adapter]\"}", 
+            "tool_state": "{\"name\": \"Input Dataset [Adapter ot Primer list]\"}", 
             "tool_version": null, 
             "type": "data_input", 
             "user_outputs": [], 
@@ -36,7 +36,7 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "Input Dataset [fastq reads]"
+                    "name": "Input Dataset [Left-hand of Paired End reads]"
                 }
             ], 
             "label": null, 
@@ -48,7 +48,7 @@
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"name\": \"Input Dataset [fastq reads]\"}", 
+            "tool_state": "{\"name\": \"Input Dataset [Left-hand of Paired End reads]\"}", 
             "tool_version": null, 
             "type": "data_input", 
             "user_outputs": [], 
@@ -57,9 +57,38 @@
         "2": {
             "annotation": "", 
             "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset [Right-hand mates for Paired End Reads]"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 219.5, 
+                "top": 477
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset [Right-hand mates for Paired End Reads]\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "1452191a-5b52-45cf-8348-01fbbc3509b9"
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
             "input_connections": {
                 "adpaters": {
                     "id": 0, 
+                    "output_name": "output"
+                }, 
+                "mates": {
+                    "id": 2, 
                     "output_name": "output"
                 }, 
                 "reads": {
@@ -80,13 +109,21 @@
                     "type": "fastqsanger"
                 }, 
                 {
+                    "name": "reads_out2", 
+                    "type": "fastqsanger"
+                }, 
+                {
                     "name": "mates_out", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "mates_out2", 
                     "type": "fastqsanger"
                 }
             ], 
             "position": {
-                "left": 452.875, 
-                "top": 383.421875
+                "left": 454.875, 
+                "top": 386.421875
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -97,13 +134,13 @@
             "user_outputs": [], 
             "uuid": "afae58f4-35c2-4ef8-a50e-baadd587394b"
         }, 
-        "3": {
+        "4": {
             "annotation": "", 
-            "id": 3, 
+            "id": 4, 
             "input_connections": {
                 "input_file": {
-                    "id": 2, 
-                    "output_name": "reads_out"
+                    "id": 3, 
+                    "output_name": "reads_out2"
                 }
             }, 
             "inputs": [], 
@@ -120,8 +157,8 @@
                 }
             ], 
             "position": {
-                "left": 858.03125, 
-                "top": 400.59375
+                "left": 832.03125, 
+                "top": 272.59375
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -132,18 +169,57 @@
             "user_outputs": [], 
             "uuid": "7b117e4a-3d37-4a12-ab30-36c142e2e2ed"
         }, 
-        "4": {
+        "5": {
             "annotation": "", 
-            "id": 4, 
+            "id": 5, 
             "input_connections": {
-                "single_or_paired|input_singles": {
-                    "id": 2, 
-                    "output_name": "reads_out"
+                "input_file": {
+                    "id": 3, 
+                    "output_name": "mates_out2"
                 }
             }, 
             "inputs": [], 
             "label": null, 
-            "name": "Sailfish_custom", 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 835.5, 
+                "top": 474
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
+            "tool_version": "0.63", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "27765ab9-d04c-45d7-8885-22ed81a68ee7"
+        }, 
+        "6": {
+            "annotation": "", 
+            "id": 6, 
+            "input_connections": {
+                "single_or_paired|input_mate1": {
+                    "id": 3, 
+                    "output_name": "reads_out2"
+                }, 
+                "single_or_paired|input_mate2": {
+                    "id": 3, 
+                    "output_name": "mates_out2"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Sailfish_Wrapper", 
             "outputs": [
                 {
                     "name": "log", 
@@ -163,18 +239,18 @@
                 }
             ], 
             "position": {
-                "left": 858.46875, 
-                "top": 599.96875
+                "left": 836.5, 
+                "top": 676
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "sailfish_custom", 
-            "tool_state": "{\"single_or_paired\": \"{\\\"input_singles\\\": null, \\\"single_or_paired_opts\\\": \\\"single\\\", \\\"__current_case__\\\": 0}\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"index_path\": \"\\\"mm10_refMrna\\\"\"}", 
+            "tool_id": "Sailfish_Wrapper", 
+            "tool_state": "{\"single_or_paired\": \"{\\\"__current_case__\\\": 1, \\\"orientation\\\": \\\"toward\\\", \\\"input_mate1\\\": null, \\\"single_or_paired_opts\\\": \\\"paired\\\", \\\"strandedness\\\": \\\"unknown\\\", \\\"input_mate2\\\": null}\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"index_path\": \"\\\"mm10_cdna_all\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "458dca10-3935-4c76-b930-e98033aadc99"
+            "uuid": "74e60142-8626-4df0-b3ec-7c4149645533"
         }
     }, 
-    "uuid": "f49d9a16-3ec4-4a64-b676-db0d8ee0da5c"
+    "uuid": "a3aed29f-fbb7-411b-9830-bf80ce65fc5f"
 }

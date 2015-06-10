@@ -1,0 +1,166 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "RNA-seq_03(Analysis of DEG in edgeR)", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset [Merged Count-data file]"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 234.5, 
+                "top": 316
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset [Merged Count-data file]\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "2cec3da9-51f3-4788-97b1-cbdc662808b1"
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {
+                "input1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "AddGroupIdForDEGAnalysis", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 439, 
+                "top": 338
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "AddGroupIdForDEGAnalysis", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"AddGroupIdForDEGAnalysis\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "450c183a-a34a-44d2-968a-f83202f16a94"
+        }, 
+        "2": {
+            "annotation": "", 
+            "id": 2, 
+            "input_connections": {
+                "input": {
+                    "id": 1, 
+                    "output_name": "tab_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Select", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "input"
+                }
+            ], 
+            "position": {
+                "left": 728.5, 
+                "top": 456
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "Grep1", 
+            "tool_state": "{\"__page__\": 0, \"input\": \"null\", \"invert\": \"\\\"true\\\"\", \"__rerun_remap_job_id__\": null, \"pattern\": \"\\\"^[ \\\\\\\\t]+\\\"\"}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "3106157c-5a90-4a14-a6d0-ecf974557b8f"
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
+            "input_connections": {
+                "matrix": {
+                    "id": 2, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "edgeR", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "norm_exp", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 944.5, 
+                "top": 510
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/fcaramia/edger/edgeR/0.0.2", 
+            "tool_state": "{\"analysis_type\": \"{\\\"tagwise_disp\\\": {\\\"twd_trend\\\": \\\"movingave\\\", \\\"twd\\\": \\\"TRUE\\\", \\\"__current_case__\\\": 0}, \\\"analysis\\\": \\\"pw\\\", \\\"__current_case__\\\": 0, \\\"rowsumfilter\\\": \\\"5\\\"}\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"fdr\": \"\\\"BH\\\"\", \"matrix\": \"null\"}", 
+            "tool_version": "0.0.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "fef2a8e9-3d89-4bee-90c4-4660f7a29f83"
+        }, 
+        "4": {
+            "annotation": "", 
+            "id": 4, 
+            "input_connections": {
+                "input1": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "JoinRefseqMouseGeneSymbol", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 1183, 
+                "top": 579
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "JoinRefseqMouseGeneSymbol", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"JoinRefseqMouseGeneSymbol\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "cdcca65e-0073-47e6-8f8a-5de1c0cf43fc"
+        }
+    }, 
+    "uuid": "55b67d48-4199-4d0c-9a79-77c709fadc33"
+}

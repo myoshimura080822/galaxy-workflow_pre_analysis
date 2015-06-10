@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "", 
     "format-version": "0.1", 
-    "name": "Summary_of_FastQC_and_Saifish_and_Analysis_of_Corr_Cluster_PCA", 
+    "name": "RNA-seq_02(Plotting of QC-all,corr,H-clustering and PCA)", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -70,8 +70,8 @@
                 }
             ], 
             "position": {
-                "left": 200, 
-                "top": 440
+                "left": 207, 
+                "top": 344
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -104,6 +104,14 @@
                     "type": "tabular"
                 }, 
                 {
+                    "name": "tab_fqc", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tab_sf", 
+                    "type": "tabular"
+                }, 
+                {
                     "name": "html_file", 
                     "type": "html"
                 }
@@ -132,7 +140,7 @@
             }, 
             "inputs": [], 
             "label": null, 
-            "name": "SailfishConvertAndMergeColumnForDEG", 
+            "name": "ConvertAndMergeCountData", 
             "outputs": [
                 {
                     "name": "tab_file", 
@@ -140,17 +148,17 @@
                 }
             ], 
             "position": {
-                "left": 497, 
-                "top": 336
+                "left": 498, 
+                "top": 408
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "SailfishConvertAndMergeColumnForDEG", 
-            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"SailfishConvertAndMergeColumnForDEG\\\"\"}", 
+            "tool_id": "ConvertAndMergeCountData", 
+            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"input1\": \"null\", \"__rerun_remap_job_id__\": null, \"input_toint\": \"\\\"True\\\"\", \"job_name\": \"\\\"ConvertAndMergeCountData\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "8d2c8103-0b27-4da0-beb5-9ee63ba868df"
+            "uuid": "bc56270a-3cbb-4d64-9f99-ad06e6b4e372"
         }, 
         "5": {
             "annotation": "", 
@@ -179,17 +187,17 @@
                 }
             ], 
             "position": {
-                "left": 921, 
-                "top": 354
+                "left": 864.5, 
+                "top": 356
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "CorrAndClusterForLogCountData", 
-            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"CorrAndClusterForLogCountData\\\"\"}", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"CorrAndClusterForLogCountData\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "d38a5adc-fc5c-4b63-b234-1e6ac6bdee1f"
+            "uuid": "2a0fd32e-a750-4858-8a82-fe8534ed5a06"
         }, 
         "6": {
             "annotation": "", 
@@ -218,18 +226,18 @@
                 }
             ], 
             "position": {
-                "left": 921, 
-                "top": 528
+                "left": 867, 
+                "top": 566
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "PcaAndVisualizationInGalaxy", 
-            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"PcaAndVisualizationInGalaxy\\\"\"}", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"PcaAndVisualizationInGalaxy\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "204c4784-43ef-4d78-be7c-31203b2abf58"
+            "uuid": "0371c9c5-0919-45e9-a4c0-0150f3c483fd"
         }
     }, 
-    "uuid": "c2fb17eb-4ff9-4a6d-b9bd-c0a1e61e7598"
+    "uuid": "e337849a-c2ae-492a-b85f-f52a4861fa5f"
 }
