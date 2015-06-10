@@ -1,4 +1,4 @@
-# galaxy-workflow_pre_analysis
+# workflow_rnaseq_on_docker_galaxy
 
 ## License (MIT)
 Copyright (c) 2015 Mika Yoshimura and RIKEN Bioinformatics Research Unit Released under the MIT license 
