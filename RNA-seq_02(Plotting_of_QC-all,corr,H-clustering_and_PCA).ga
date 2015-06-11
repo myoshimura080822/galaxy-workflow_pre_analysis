@@ -2,7 +2,7 @@
     "a_galaxy_workflow": "true", 
     "annotation": "", 
     "format-version": "0.1", 
-    "name": "RNA-seq_02(Plotting of QC-all,corr,H-clustering and PCA)", 
+    "name": "RNA-seq_02_Plotting of QC-all,corr,H-clustering and PCA)", 
     "steps": {
         "0": {
             "annotation": "", 
@@ -18,17 +18,17 @@
                 }
             ], 
             "position": {
-                "left": 200, 
-                "top": 124
+                "left": 168.5, 
+                "top": 105
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetFastQCRawDataFiles", 
-            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"None\\\"\", \"inp_apikey\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetFastQCRawDataFiles\\\"\"}", 
+            "tool_state": "{\"inp_apikey\": \"\\\"\\\"\", \"inp_hname\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"job_name\": \"\\\"GetFastQCRawDataFiles\\\"\", \"__page__\": 0}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "7e33c902-3aa4-4e32-9be4-5aa4bcf5f98c"
+            "uuid": "af27bf03-2ffe-4e71-bec7-a003ad6e0e29"
         }, 
         "1": {
             "annotation": "", 
@@ -36,7 +36,7 @@
             "input_connections": {}, 
             "inputs": [], 
             "label": null, 
-            "name": "GetSailfishCountInfo", 
+            "name": "GetQuantityCountInfo", 
             "outputs": [
                 {
                     "name": "tab_file", 
@@ -44,17 +44,17 @@
                 }
             ], 
             "position": {
-                "left": 200, 
-                "top": 200
+                "left": 171, 
+                "top": 198
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "GetSailfishCountInfo", 
-            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"None\\\"\", \"inp_apikey\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetSailfishCountInfo\\\"\"}", 
+            "tool_id": "GetQuantityCountInfo", 
+            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"\\\"\", \"inp_apikey\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"inp_wftype\": \"\\\"sailfish\\\"\", \"job_name\": \"\\\"GetQuantityCountInfo\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "d9e5d7ca-1b88-4ea8-81e5-e82bd46fd664"
+            "uuid": "dd2341c7-d251-4161-88bc-7fa579b95e50"
         }, 
         "2": {
             "annotation": "", 
@@ -70,28 +70,28 @@
                 }
             ], 
             "position": {
-                "left": 207, 
-                "top": 344
+                "left": 205, 
+                "top": 391
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetDatasetDatPath", 
-            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_hname\": \"\\\"None\\\"\", \"input_apikey\": \"\\\"None\\\"\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"GetDatasetDatPath\\\"\"}", 
+            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_hname\": \"\\\"\\\"\", \"input_apikey\": \"\\\"\\\"\", \"job_name\": \"\\\"GetDatasetDatPath\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "27670b19-6f64-40b0-92ce-be9cbc19bd23"
+            "uuid": "4de1c63e-e21a-4a66-978f-aee1934e611f"
         }, 
         "3": {
             "annotation": "", 
             "id": 3, 
             "input_connections": {
-                "input_fastqc": {
-                    "id": 0, 
+                "input_countinfo": {
+                    "id": 1, 
                     "output_name": "tab_file"
                 }, 
-                "input_sailfish": {
-                    "id": 1, 
+                "input_fastqc": {
+                    "id": 0, 
                     "output_name": "tab_file"
                 }
             }, 
@@ -117,17 +117,17 @@
                 }
             ], 
             "position": {
-                "left": 494, 
-                "top": 141
+                "left": 441.5, 
+                "top": 121
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "SummaryOfReadQC", 
-            "tool_state": "{\"input_fastqc\": \"null\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_sailfish\": \"null\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"job_name\": \"\\\"SummaryOfReadQC\\\"\"}", 
+            "tool_state": "{\"input_fastqc\": \"null\", \"__rerun_remap_job_id__\": null, \"input_countinfo\": \"null\", \"job_name\": \"\\\"SummaryOfReadQC\\\"\", \"__page__\": 0}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "2af888e1-daaa-47c0-97ec-1fce4bcf973c"
+            "uuid": "398145a3-4df8-4e09-ad0b-ca2ce2f99673"
         }, 
         "4": {
             "annotation": "", 
@@ -148,8 +148,8 @@
                 }
             ], 
             "position": {
-                "left": 498, 
-                "top": 408
+                "left": 451, 
+                "top": 385
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -158,50 +158,11 @@
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "bc56270a-3cbb-4d64-9f99-ad06e6b4e372"
+            "uuid": "f0ad6f81-bebd-4ffe-a634-1f3fac83a38f"
         }, 
         "5": {
             "annotation": "", 
             "id": 5, 
-            "input_connections": {
-                "input1": {
-                    "id": 4, 
-                    "output_name": "tab_file"
-                }
-            }, 
-            "inputs": [], 
-            "label": null, 
-            "name": "CorrAndClusterForLogCountData", 
-            "outputs": [
-                {
-                    "name": "tab_file", 
-                    "type": "tabular"
-                }, 
-                {
-                    "name": "tab_file2", 
-                    "type": "tabular"
-                }, 
-                {
-                    "name": "html_file", 
-                    "type": "html"
-                }
-            ], 
-            "position": {
-                "left": 864.5, 
-                "top": 356
-            }, 
-            "post_job_actions": {}, 
-            "tool_errors": null, 
-            "tool_id": "CorrAndClusterForLogCountData", 
-            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"CorrAndClusterForLogCountData\\\"\"}", 
-            "tool_version": "0.01", 
-            "type": "tool", 
-            "user_outputs": [], 
-            "uuid": "2a0fd32e-a750-4858-8a82-fe8534ed5a06"
-        }, 
-        "6": {
-            "annotation": "", 
-            "id": 6, 
             "input_connections": {
                 "input1": {
                     "id": 4, 
@@ -226,8 +187,8 @@
                 }
             ], 
             "position": {
-                "left": 867, 
-                "top": 566
+                "left": 793, 
+                "top": 314
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -236,8 +197,47 @@
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "0371c9c5-0919-45e9-a4c0-0150f3c483fd"
+            "uuid": "400598da-d311-49da-8dd7-1b08fe09c5d7"
+        }, 
+        "6": {
+            "annotation": "", 
+            "id": 6, 
+            "input_connections": {
+                "input1": {
+                    "id": 4, 
+                    "output_name": "tab_file"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "CorrAndClusterForLogCountData", 
+            "outputs": [
+                {
+                    "name": "tab_file", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "tab_file2", 
+                    "type": "tabular"
+                }, 
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }
+            ], 
+            "position": {
+                "left": 796.5, 
+                "top": 498
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "CorrAndClusterForLogCountData", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"CorrAndClusterForLogCountData\\\"\"}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "c9b65eac-6395-4005-a8e1-c6227a8263a9"
         }
     }, 
-    "uuid": "e337849a-c2ae-492a-b85f-f52a4861fa5f"
+    "uuid": "cb5051ad-0fb3-41ab-b7d7-e95aae4a2d26"
 }

@@ -280,6 +280,37 @@
             "annotation": "", 
             "id": 8, 
             "input_connections": {
+                "input1": {
+                    "id": 7, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Flagstat", 
+            "outputs": [
+                {
+                    "name": "output1", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1159.5, 
+                "top": 777
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/samtools_flagstat/samtools_flagstat/2.0", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\"}", 
+            "tool_version": "2.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "512c09e8-00c7-409c-a113-c392db0d3b78"
+        }, 
+        "9": {
+            "annotation": "", 
+            "id": 9, 
+            "input_connections": {
                 "bamOrSamFile": {
                     "id": 7, 
                     "output_name": "output"
@@ -320,5 +351,5 @@
             "uuid": "a236a516-8aee-4f22-a863-1ddbf8088f32"
         }
     }, 
-    "uuid": "bf435b08-0646-4c85-ab3d-1a961f246047"
+    "uuid": "5d9e09f8-5f24-4aea-9fc3-357099c5f1cc"
 }
