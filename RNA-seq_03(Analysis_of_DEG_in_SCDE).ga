@@ -48,17 +48,17 @@
                 }
             ], 
             "position": {
-                "left": 439, 
-                "top": 338
+                "left": 434.5, 
+                "top": 371
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "AddGroupIdForDEGAnalysis", 
-            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"AddGroupIdForDEGAnalysis\\\"\"}", 
+            "tool_state": "{\"input2\": \"\\\"1\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"AddGroupIdForDEGAnalysis\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "450c183a-a34a-44d2-968a-f83202f16a94"
+            "uuid": "acd62015-4f6c-4a73-ad38-4a7263e2c27f"
         }, 
         "2": {
             "annotation": "", 
@@ -193,5 +193,5 @@
             "uuid": "952b98b7-a3f3-43c3-a108-d9e7ae9853b2"
         }
     }, 
-    "uuid": "1629dfde-249f-44cc-9c61-e1487931f048"
+    "uuid": "c90cb830-372b-4646-ac40-22e6c3ee08f0"
 }
