@@ -19,12 +19,12 @@
             ], 
             "position": {
                 "left": 168.5, 
-                "top": 105
+                "top": 256
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetFastQCRawDataFiles", 
-            "tool_state": "{\"inp_apikey\": \"\\\"\\\"\", \"inp_hname\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"job_name\": \"\\\"GetFastQCRawDataFiles\\\"\", \"__page__\": 0}", 
+            "tool_state": "{\"inp_apikey\": \"\\\"admin\\\"\", \"inp_hname\": \"\\\"None\\\"\", \"__rerun_remap_job_id__\": null, \"job_name\": \"\\\"GetFastQCRawDataFiles\\\"\", \"__page__\": 0}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
@@ -45,12 +45,12 @@
             ], 
             "position": {
                 "left": 171, 
-                "top": 198
+                "top": 349
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetQuantityCountInfo", 
-            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"\\\"\", \"inp_apikey\": \"\\\"\\\"\", \"__rerun_remap_job_id__\": null, \"inp_wftype\": \"\\\"sailfish\\\"\", \"job_name\": \"\\\"GetQuantityCountInfo\\\"\"}", 
+            "tool_state": "{\"__page__\": 0, \"inp_hname\": \"\\\"None\\\"\", \"inp_apikey\": \"\\\"admin\\\"\", \"__rerun_remap_job_id__\": null, \"inp_wftype\": \"\\\"sailfish\\\"\", \"job_name\": \"\\\"GetQuantityCountInfo\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
@@ -70,13 +70,13 @@
                 }
             ], 
             "position": {
-                "left": 205, 
-                "top": 391
+                "left": 176, 
+                "top": 572
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "GetDatasetDatPath", 
-            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_hname\": \"\\\"\\\"\", \"input_apikey\": \"\\\"\\\"\", \"job_name\": \"\\\"GetDatasetDatPath\\\"\"}", 
+            "tool_state": "{\"input_wftype\": \"\\\"sailfish\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input_hname\": \"\\\"None\\\"\", \"input_apikey\": \"\\\"admin\\\"\", \"job_name\": \"\\\"GetDatasetDatPath\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
@@ -117,17 +117,17 @@
                 }
             ], 
             "position": {
-                "left": 441.5, 
-                "top": 121
+                "left": 767, 
+                "top": 200
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "SummaryOfReadQC", 
-            "tool_state": "{\"input_fastqc\": \"null\", \"__rerun_remap_job_id__\": null, \"input_countinfo\": \"null\", \"job_name\": \"\\\"SummaryOfReadQC\\\"\", \"__page__\": 0}", 
+            "tool_state": "{\"input2\": \"\\\"1\\\"\", \"input_fastqc\": \"null\", \"input_countinfo\": \"null\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"job_name\": \"\\\"SummaryOfReadQC\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "398145a3-4df8-4e09-ad0b-ca2ce2f99673"
+            "uuid": "43464645-0df6-4ac2-8948-c923d0daa7e6"
         }, 
         "4": {
             "annotation": "", 
@@ -145,11 +145,15 @@
                 {
                     "name": "tab_file", 
                     "type": "tabular"
+                }, 
+                {
+                    "name": "tab_file2", 
+                    "type": "tabular"
                 }
             ], 
             "position": {
                 "left": 451, 
-                "top": 385
+                "top": 536
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -187,17 +191,17 @@
                 }
             ], 
             "position": {
-                "left": 793, 
-                "top": 314
+                "left": 829.5, 
+                "top": 526
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "PcaAndVisualizationInGalaxy", 
-            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"PcaAndVisualizationInGalaxy\\\"\"}", 
+            "tool_state": "{\"input2\": \"\\\"1\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"PcaAndVisualizationInGalaxy\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "400598da-d311-49da-8dd7-1b08fe09c5d7"
+            "uuid": "acc89438-6a4e-47e3-913c-42a4e6777945"
         }, 
         "6": {
             "annotation": "", 
@@ -217,27 +221,23 @@
                     "type": "tabular"
                 }, 
                 {
-                    "name": "tab_file2", 
-                    "type": "tabular"
-                }, 
-                {
                     "name": "html_file", 
                     "type": "html"
                 }
             ], 
             "position": {
-                "left": 796.5, 
-                "top": 498
+                "left": 832, 
+                "top": 704
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "CorrAndClusterForLogCountData", 
-            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"CorrAndClusterForLogCountData\\\"\"}", 
+            "tool_state": "{\"input2\": \"\\\"1\\\"\", \"__page__\": 0, \"__rerun_remap_job_id__\": null, \"input1\": \"null\", \"job_name\": \"\\\"CorrAndClusterForLogCountData\\\"\"}", 
             "tool_version": "0.01", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "c9b65eac-6395-4005-a8e1-c6227a8263a9"
+            "uuid": "fbcb9f12-e614-4e87-9bab-8802e6c0b2e5"
         }
     }, 
-    "uuid": "cb5051ad-0fb3-41ab-b7d7-e95aae4a2d26"
+    "uuid": "ff6c12c6-917a-4785-adf3-861dcd879738"
 }
