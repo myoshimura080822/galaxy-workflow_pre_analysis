@@ -11,23 +11,23 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "Input Dataset [Adapter or Primer list]"
+                    "name": "Input Dataset"
                 }
             ], 
             "label": null, 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
-                "left": 217.859375, 
-                "top": 329.40625
+                "left": 164.5, 
+                "top": 410
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"name\": \"Input Dataset [Adapter or Primer list]\"}", 
+            "tool_state": "{\"name\": \"Input Dataset\"}", 
             "tool_version": null, 
             "type": "data_input", 
             "user_outputs": [], 
-            "uuid": "051d1cad-9c03-4e7b-a3c3-1ab0e281afc9"
+            "uuid": "74936615-f30f-4b1a-b134-cc8ca7433093"
         }, 
         "1": {
             "annotation": "", 
@@ -36,23 +36,23 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "Input Dataset [Single End reads]"
+                    "name": "Input Dataset"
                 }
             ], 
             "label": null, 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
-                "left": 219.984375, 
-                "top": 402.53125
+                "left": 166.5, 
+                "top": 505
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"name\": \"Input Dataset [Single End reads]\"}", 
+            "tool_state": "{\"name\": \"Input Dataset\"}", 
             "tool_version": null, 
             "type": "data_input", 
             "user_outputs": [], 
-            "uuid": "34d4f265-b754-48ab-9be1-2cdb12ce785f"
+            "uuid": "518a57f6-88aa-4847-8093-043738cf350f"
         }, 
         "2": {
             "annotation": "", 
@@ -61,23 +61,23 @@
             "inputs": [
                 {
                     "description": "", 
-                    "name": "Input Dataset [Reference Transcriptome]"
+                    "name": "Input Dataset"
                 }
             ], 
             "label": null, 
             "name": "Input dataset", 
             "outputs": [], 
             "position": {
-                "left": 616.5, 
-                "top": 898
+                "left": 952.5, 
+                "top": 774
             }, 
             "tool_errors": null, 
             "tool_id": null, 
-            "tool_state": "{\"name\": \"Input Dataset [Reference Transcriptome]\"}", 
+            "tool_state": "{\"name\": \"Input Dataset\"}", 
             "tool_version": null, 
             "type": "data_input", 
             "user_outputs": [], 
-            "uuid": "4dc9de01-ef13-4aa3-bf5b-da323167e5a9"
+            "uuid": "42187f14-1827-4030-bb19-f006948e8ba5"
         }, 
         "3": {
             "annotation": "", 
@@ -118,21 +118,76 @@
                 }
             ], 
             "position": {
-                "left": 452.875, 
-                "top": 383.421875
+                "left": 436.5, 
+                "top": 350
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
             "tool_id": "toolshed.g2.bx.psu.edu/repos/jjohnson/fastq_mcf/fastq_mcf/1.0", 
-            "tool_state": "{\"phred\": \"\\\"\\\"\", \"__page__\": 0, \"noclip\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"reads\": \"null\", \"mates\": \"null\", \"adpaters\": \"null\", \"trimming\": \"{\\\"nmax\\\": \\\"\\\", \\\"qthr\\\": \\\"\\\", \\\"scale\\\": \\\"\\\", \\\"qwin\\\": \\\"\\\", \\\"rmns\\\": \\\"False\\\", \\\"pctns\\\": \\\"\\\", \\\"ilv3\\\": \\\"\\\", \\\"sampcnt\\\": \\\"\\\", \\\"nkeep\\\": \\\"36\\\", \\\"pctdiff\\\": \\\"\\\", \\\"skewpct\\\": \\\"4.0\\\", \\\"__current_case__\\\": 2, \\\"minpct\\\": \\\"\\\", \\\"choice\\\": \\\"user_set\\\", \\\"nmin\\\": \\\"\\\"}\"}", 
+            "tool_state": "{\"phred\": \"\\\"\\\"\", \"__page__\": 0, \"noclip\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"reads\": \"null\", \"mates\": \"null\", \"adpaters\": \"null\", \"trimming\": \"{\\\"__current_case__\\\": 0, \\\"choice\\\": \\\"defaults\\\"}\"}", 
             "tool_version": "1.0", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "afae58f4-35c2-4ef8-a50e-baadd587394b"
+            "uuid": "8f8f877b-1010-4ee3-8fd8-e52c6c7ea7f9"
         }, 
         "4": {
             "annotation": "", 
             "id": 4, 
+            "input_connections": {
+                "library|input_1": {
+                    "id": 3, 
+                    "output_name": "reads_out"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Bowtie2", 
+            "outputs": [
+                {
+                    "name": "output_unaligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_l", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_aligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output_unaligned_reads_r", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "output", 
+                    "type": "bam"
+                }, 
+                {
+                    "name": "output_sam", 
+                    "type": "sam"
+                }, 
+                {
+                    "name": "mapping_stats", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 803.5, 
+                "top": 263
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/2.2.6.2", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"library\": \"{\\\"aligned_file\\\": \\\"False\\\", \\\"unaligned_file\\\": \\\"False\\\", \\\"type\\\": \\\"single\\\", \\\"__current_case__\\\": 0, \\\"input_1\\\": null}\", \"reference_genome\": \"{\\\"source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0, \\\"index\\\": \\\"GRCh38_cdna_all_spike\\\"}\", \"rg\": \"{\\\"rg_selector\\\": \\\"do_not_set\\\", \\\"__current_case__\\\": 3}\", \"save_mapping_stats\": \"\\\"False\\\"\", \"analysis_type\": \"{\\\"analysis_type_selector\\\": \\\"simple\\\", \\\"presets\\\": \\\"no_presets\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "2.2.6.2", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "9778c6c2-1a74-47d9-95b2-012efbabe1e1"
+        }, 
+        "5": {
+            "annotation": "", 
+            "id": 5, 
             "input_connections": {
                 "input_file": {
                     "id": 3, 
@@ -153,67 +208,24 @@
                 }
             ], 
             "position": {
-                "left": 832.03125, 
-                "top": 272.59375
+                "left": 807.5, 
+                "top": 568
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.64", 
             "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
-            "tool_version": "0.63", 
+            "tool_version": "0.64", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "7b117e4a-3d37-4a12-ab30-36c142e2e2ed"
-        }, 
-        "5": {
-            "annotation": "", 
-            "id": 5, 
-            "input_connections": {
-                "library|input_1": {
-                    "id": 3, 
-                    "output_name": "reads_out"
-                }, 
-                "reference_genome|own_file": {
-                    "id": 2, 
-                    "output_name": "output"
-                }
-            }, 
-            "inputs": [], 
-            "label": null, 
-            "name": "Bowtie2", 
-            "outputs": [
-                {
-                    "name": "output_unaligned_reads_l", 
-                    "type": "fastqsanger"
-                }, 
-                {
-                    "name": "output_unaligned_reads_r", 
-                    "type": "fastqsanger"
-                }, 
-                {
-                    "name": "output", 
-                    "type": "bam"
-                }
-            ], 
-            "position": {
-                "left": 836.5, 
-                "top": 677
-            }, 
-            "post_job_actions": {}, 
-            "tool_errors": null, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/bowtie2/bowtie2/0.3", 
-            "tool_state": "{\"__page__\": 0, \"read_group\": \"{\\\"__current_case__\\\": 1, \\\"read_group_selector\\\": \\\"no\\\"}\", \"__rerun_remap_job_id__\": null, \"library\": \"{\\\"unaligned_file\\\": \\\"False\\\", \\\"type\\\": \\\"single\\\", \\\"__current_case__\\\": 0, \\\"input_1\\\": null}\", \"reference_genome\": \"{\\\"source\\\": \\\"history\\\", \\\"__current_case__\\\": 1, \\\"own_file\\\": null}\", \"analysis_type\": \"{\\\"analysis_type_selector\\\": \\\"simple\\\", \\\"presets\\\": \\\"no_presets\\\", \\\"__current_case__\\\": 0}\"}", 
-            "tool_version": "0.3", 
-            "type": "tool", 
-            "user_outputs": [], 
-            "uuid": "a670dcac-9c98-48d6-9d41-3ed9c224173e"
+            "uuid": "e22b1516-0302-4a87-a1ac-eca67d7e5ea6"
         }, 
         "6": {
             "annotation": "", 
             "id": 6, 
             "input_connections": {
                 "input1": {
-                    "id": 5, 
+                    "id": 4, 
                     "output_name": "output"
                 }
             }, 
@@ -227,8 +239,8 @@
                 }
             ], 
             "position": {
-                "left": 1238.5, 
-                "top": 770
+                "left": 1201.5, 
+                "top": 469
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -237,14 +249,14 @@
             "tool_version": "2.0", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "1ff45623-b171-47c0-9eb8-318634c7f7dc"
+            "uuid": "155d40a8-c03b-4512-9954-7128c6148f7c"
         }, 
         "7": {
             "annotation": "", 
             "id": 7, 
             "input_connections": {
                 "bamOrSamFile": {
-                    "id": 5, 
+                    "id": 4, 
                     "output_name": "output"
                 }, 
                 "multiFasta": {
@@ -270,8 +282,8 @@
                 }
             ], 
             "position": {
-                "left": 1149.5, 
-                "top": 917
+                "left": 1201.5, 
+                "top": 582
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -280,8 +292,8 @@
             "tool_version": "1.1.1", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "a236a516-8aee-4f22-a863-1ddbf8088f32"
+            "uuid": "dfa5e88a-a221-4e77-8a7c-dc4361c1cf00"
         }
     }, 
-    "uuid": "c3ff443e-b23e-428b-9efa-d61e9991240f"
+    "uuid": "97feef54-d843-4f55-8013-c642fbf6911a"
 }

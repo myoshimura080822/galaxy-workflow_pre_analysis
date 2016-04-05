@@ -128,17 +128,17 @@
                 }
             ], 
             "position": {
-                "left": 858.03125, 
-                "top": 400.59375
+                "left": 864.5, 
+                "top": 412
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.64", 
             "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
-            "tool_version": "0.63", 
+            "tool_version": "0.64", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "7b117e4a-3d37-4a12-ab30-36c142e2e2ed"
+            "uuid": "81cbe229-2781-47e3-a146-994bf8947598"
         }, 
         "4": {
             "annotation": "", 
@@ -184,5 +184,5 @@
             "uuid": "5f283c49-27a6-43b0-8885-de71166f48f1"
         }
     }, 
-    "uuid": "fb6aa0d8-4fad-4693-918e-f259d45f4ff9"
+    "uuid": "c176d730-dab3-43a4-a465-0984660e6e72"
 }

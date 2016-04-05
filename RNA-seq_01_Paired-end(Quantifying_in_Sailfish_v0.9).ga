@@ -157,17 +157,17 @@
                 }
             ], 
             "position": {
-                "left": 832.03125, 
-                "top": 272.59375
+                "left": 791.5, 
+                "top": 216
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.64", 
             "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
-            "tool_version": "0.63", 
+            "tool_version": "0.64", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "7b117e4a-3d37-4a12-ab30-36c142e2e2ed"
+            "uuid": "e8713c5c-d590-42bd-9183-424b340c9284"
         }, 
         "5": {
             "annotation": "", 
@@ -192,17 +192,17 @@
                 }
             ], 
             "position": {
-                "left": 835.5, 
-                "top": 474
+                "left": 883.5, 
+                "top": 457
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
-            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.63", 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.64", 
             "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
-            "tool_version": "0.63", 
+            "tool_version": "0.64", 
             "type": "tool", 
             "user_outputs": [], 
-            "uuid": "27765ab9-d04c-45d7-8885-22ed81a68ee7"
+            "uuid": "1ce1b35c-fdbf-40f6-bc41-99f6768754b6"
         }, 
         "6": {
             "annotation": "", 
@@ -239,8 +239,8 @@
                 }
             ], 
             "position": {
-                "left": 835.5, 
-                "top": 670
+                "left": 803.5, 
+                "top": 659
             }, 
             "post_job_actions": {}, 
             "tool_errors": null, 
@@ -252,5 +252,5 @@
             "uuid": "23e37368-7796-4c2b-9564-b4e048374744"
         }
     }, 
-    "uuid": "548dd29c-ca13-4018-8908-39616f337b11"
+    "uuid": "9254f678-0a64-482f-9940-c73721009bb5"
 }
