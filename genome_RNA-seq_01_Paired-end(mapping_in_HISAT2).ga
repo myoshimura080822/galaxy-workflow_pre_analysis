@@ -1,0 +1,356 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "genome_RNA-seq_01_Paired-end(mapping in HISAT2)", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset [Adapter or Primer list]"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 216.859375, 
+                "top": 320.40625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset [Adapter or Primer list]\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "051d1cad-9c03-4e7b-a3c3-1ab0e281afc9"
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset [Paired end left]"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 219.984375, 
+                "top": 396.53125
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset [Paired end left]\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "34d4f265-b754-48ab-9be1-2cdb12ce785f"
+        }, 
+        "2": {
+            "annotation": "", 
+            "id": 2, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset [Paired end right]"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 218.5, 
+                "top": 490.40625
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset [Paired end right]\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "2628ed56-4131-4612-9e57-cf95ec598c35"
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset [BED format]"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 866.5, 
+                "top": 791
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset [BED format]\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "e9592eb3-67db-4f10-af15-71677b91c526"
+        }, 
+        "4": {
+            "annotation": "", 
+            "id": 4, 
+            "input_connections": {
+                "adpaters": {
+                    "id": 0, 
+                    "output_name": "output"
+                }, 
+                "mates": {
+                    "id": 2, 
+                    "output_name": "output"
+                }, 
+                "reads": {
+                    "id": 1, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "FastqMcf", 
+            "outputs": [
+                {
+                    "name": "log", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "reads_out", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "reads_out2", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "mates_out", 
+                    "type": "fastqsanger"
+                }, 
+                {
+                    "name": "mates_out2", 
+                    "type": "fastqsanger"
+                }
+            ], 
+            "position": {
+                "left": 452.875, 
+                "top": 377.421875
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/jjohnson/fastq_mcf/fastq_mcf/1.0", 
+            "tool_state": "{\"phred\": \"\\\"\\\"\", \"__page__\": 0, \"noclip\": \"\\\"False\\\"\", \"__rerun_remap_job_id__\": null, \"reads\": \"null\", \"mates\": \"null\", \"adpaters\": \"null\", \"trimming\": \"{\\\"nmax\\\": \\\"\\\", \\\"qthr\\\": \\\"\\\", \\\"scale\\\": \\\"\\\", \\\"qwin\\\": \\\"\\\", \\\"rmns\\\": \\\"False\\\", \\\"pctns\\\": \\\"\\\", \\\"ilv3\\\": \\\"\\\", \\\"sampcnt\\\": \\\"\\\", \\\"nkeep\\\": \\\"36\\\", \\\"pctdiff\\\": \\\"\\\", \\\"skewpct\\\": \\\"4.0\\\", \\\"__current_case__\\\": 2, \\\"minpct\\\": \\\"\\\", \\\"choice\\\": \\\"user_set\\\", \\\"nmin\\\": \\\"\\\"}\"}", 
+            "tool_version": "1.0", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "afae58f4-35c2-4ef8-a50e-baadd587394b"
+        }, 
+        "5": {
+            "annotation": "", 
+            "id": 5, 
+            "input_connections": {
+                "input_file": {
+                    "id": 4, 
+                    "output_name": "reads_out2"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 818.5, 
+                "top": 200
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.64", 
+            "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
+            "tool_version": "0.64", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "81cbe229-2781-47e3-a146-994bf8947598"
+        }, 
+        "6": {
+            "annotation": "", 
+            "id": 6, 
+            "input_connections": {
+                "input_file": {
+                    "id": 4, 
+                    "output_name": "mates_out2"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "FastQC", 
+            "outputs": [
+                {
+                    "name": "html_file", 
+                    "type": "html"
+                }, 
+                {
+                    "name": "text_file", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 823.5, 
+                "top": 392.40625
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/fastqc/fastqc/0.64", 
+            "tool_state": "{\"__page__\": 0, \"contaminants\": \"null\", \"__rerun_remap_job_id__\": null, \"limits\": \"null\", \"input_file\": \"null\"}", 
+            "tool_version": "0.64", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "f30556c5-4962-432c-b8dc-afb1c76ff479"
+        }, 
+        "7": {
+            "annotation": "", 
+            "id": 7, 
+            "input_connections": {
+                "input_format|paired|reads_f": {
+                    "id": 4, 
+                    "output_name": "reads_out"
+                }, 
+                "input_format|paired|reads_r": {
+                    "id": 4, 
+                    "output_name": "mates_out"
+                }
+            }, 
+            "inputs": [
+                {
+                    "description": "runtime parameter for tool HISAT2", 
+                    "name": "max_primary"
+                }
+            ], 
+            "label": null, 
+            "name": "HISAT2", 
+            "outputs": [
+                {
+                    "name": "output_alignments", 
+                    "type": "bam"
+                }
+            ], 
+            "position": {
+                "left": 822.5, 
+                "top": 593
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/iuc/hisat2/hisat2/1.0.1", 
+            "tool_state": "{\"alignment_options\": \"{\\\"alignment_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"input_format\": \"{\\\"paired\\\": {\\\"reads_r\\\": null, \\\"paired_end_options\\\": {\\\"paired_end_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}, \\\"paired_selector\\\": \\\"paired\\\", \\\"__current_case__\\\": 1, \\\"reads_f\\\": null}, \\\"input_format_selector\\\": \\\"fastq\\\", \\\"__current_case__\\\": 1}\", \"__page__\": 0, \"max_primary\": \"{\\\"__class__\\\": \\\"RuntimeValue\\\"}\", \"scoring_options\": \"{\\\"scoring_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"reference_genome\": \"{\\\"index\\\": \\\"mm10\\\", \\\"reference_genome_source\\\": \\\"indexed\\\", \\\"__current_case__\\\": 0}\", \"spliced_options\": \"{\\\"coefficient\\\": \\\"0\\\", \\\"canonical_penalty\\\": \\\"0\\\", \\\"no_spliced_alignment\\\": \\\"False\\\", \\\"nc_function_type\\\": \\\"C\\\", \\\"constant_term\\\": \\\"0\\\", \\\"nc_coefficient\\\": \\\"1\\\", \\\"noncanonical_penalty\\\": \\\"3\\\", \\\"known_splice_gtf\\\": null, \\\"nc_constant_term\\\": \\\"-8\\\", \\\"min_intron\\\": \\\"20\\\", \\\"function_type\\\": \\\"C\\\", \\\"rna_strandness\\\": \\\"\\\", \\\"__current_case__\\\": 1, \\\"tma\\\": \\\"--dta-cufflinks\\\", \\\"max_intron\\\": \\\"500000\\\", \\\"spliced_options_selector\\\": \\\"advanced\\\"}\", \"paired_options\": \"{\\\"paired_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\", \"__rerun_remap_job_id__\": null, \"input_options\": \"{\\\"input_options_selector\\\": \\\"defaults\\\", \\\"__current_case__\\\": 0}\"}", 
+            "tool_version": "1.0.1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "078dd309-864d-4aa8-a7d5-150d7badb684"
+        }, 
+        "8": {
+            "annotation": "", 
+            "id": 8, 
+            "input_connections": {
+                "input": {
+                    "id": 7, 
+                    "output_name": "output_alignments"
+                }, 
+                "refgene": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Read Distribution", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1157.5, 
+                "top": 534
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_read_distribution/2.4galaxy1", 
+            "tool_state": "{\"__page__\": 0, \"input\": \"null\", \"__rerun_remap_job_id__\": null, \"refgene\": \"null\"}", 
+            "tool_version": "2.4galaxy1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "9cd58cf3-fc60-46ee-8e8b-7f911d95d912"
+        }, 
+        "9": {
+            "annotation": "", 
+            "id": 9, 
+            "input_connections": {
+                "input": {
+                    "id": 7, 
+                    "output_name": "output_alignments"
+                }, 
+                "refgene": {
+                    "id": 3, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "Gene Body Converage (BAM)", 
+            "outputs": [
+                {
+                    "name": "outputcurvespdf", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "outputheatmappdf", 
+                    "type": "pdf"
+                }, 
+                {
+                    "name": "outputr", 
+                    "type": "txt"
+                }, 
+                {
+                    "name": "outputtxt", 
+                    "type": "txt"
+                }
+            ], 
+            "position": {
+                "left": 1156.5, 
+                "top": 677
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_geneBody_coverage/2.4galaxy1", 
+            "tool_state": "{\"__page__\": 0, \"__rerun_remap_job_id__\": null, \"refgene\": \"null\", \"additionalinputs\": \"[]\", \"minimum_length\": \"\\\"100\\\"\", \"input\": \"null\"}", 
+            "tool_version": "2.4galaxy1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "cf7e1502-d6a9-4c0c-af6c-f4928e15c964"
+        }
+    }, 
+    "uuid": "de20254b-d855-48a5-9560-abbddef9c6b1"
+}
