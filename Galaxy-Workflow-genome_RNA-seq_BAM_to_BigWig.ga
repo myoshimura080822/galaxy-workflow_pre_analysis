@@ -1,0 +1,137 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "genome_RNA-seq_BAM_to_BigWig", 
+    "steps": {
+        "0": {
+            "annotation": "Input .bam File", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Input .bam File", 
+                    "name": "Input Dataset"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 380.484375, 
+                "top": 429.09375
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "c4a750a7-f442-4384-a4aa-c4d2ee633e32"
+        }, 
+        "1": {
+            "annotation": "Chromosome size file (tab or space separated)", 
+            "id": 1, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "Chromosome size file (tab or space separated)", 
+                    "name": "Input Dataset"
+                }
+            ], 
+            "label": null, 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 381.984375, 
+                "top": 520.09375
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": [], 
+            "uuid": "3454b739-2eaf-4756-a0a6-ad6e7eea59a2"
+        }, 
+        "2": {
+            "annotation": "", 
+            "id": 2, 
+            "input_connections": {
+                "chromsize": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "input": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "BAM to Wiggle", 
+            "outputs": [
+                {
+                    "name": "output", 
+                    "type": "wig"
+                }, 
+                {
+                    "name": "outputfwd", 
+                    "type": "wig"
+                }, 
+                {
+                    "name": "outputrv", 
+                    "type": "wig"
+                }
+            ], 
+            "position": {
+                "left": 644.484375, 
+                "top": 311.09375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/nilesh/rseqc/rseqc_bam2wig/2.4galaxy1", 
+            "tool_state": "{\"__page__\": 0, \"strand_type\": \"{\\\"strand_specific\\\": \\\"none\\\", \\\"__current_case__\\\": 2}\", \"chromsize\": \"null\", \"__rerun_remap_job_id__\": null, \"multihits\": \"{\\\"skipmultihits\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"input\": \"null\", \"wigsum\": \"{\\\"wigsum_type\\\": \\\"False\\\", \\\"__current_case__\\\": 1}\", \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\"}", 
+            "tool_version": "2.4galaxy1", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "f61c12bf-b79a-4556-93cf-17781209cf31"
+        }, 
+        "3": {
+            "annotation": "", 
+            "id": 3, 
+            "input_connections": {
+                "genome": {
+                    "id": 1, 
+                    "output_name": "output"
+                }, 
+                "input": {
+                    "id": 2, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "label": null, 
+            "name": "wigToBigWig_Wrapper", 
+            "outputs": [
+                {
+                    "name": "outfile", 
+                    "type": "bigwig"
+                }
+            ], 
+            "position": {
+                "left": 1002.484375, 
+                "top": 507.09375
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "wigToBigWig_Wrapper", 
+            "tool_state": "{\"input\": \"null\", \"__rerun_remap_job_id__\": null, \"chromInfo\": \"\\\"/galaxy-central/tool-data/shared/ucsc/chrom/?.len\\\"\", \"genome\": \"null\", \"__page__\": 0}", 
+            "tool_version": "0.01", 
+            "type": "tool", 
+            "user_outputs": [], 
+            "uuid": "e3579476-2441-4155-bde7-e5027d7e580b"
+        }
+    }, 
+    "uuid": "f1a0df55-8483-459d-9b71-a42447eef051"
+}
